@@ -48,7 +48,7 @@ defmodule Issues.CLI do
   end
 
   def process({user, project, _}) do
-    Issues.GitHubIssues.fetch(user, project)
+    Issues.GithubIssues.fetch(user, project)
     |> decode_response()
   end
 
